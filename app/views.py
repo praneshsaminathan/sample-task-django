@@ -15,7 +15,6 @@ def home(request):
 
 def login(request):
     if request.method == "POST":
-        import ipdb; ipdb.set_trace()
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
