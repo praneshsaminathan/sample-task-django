@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container main-container">
+    <div class="row">
+        <div class="col-md-5 col-sm-12">
+            <div class="login-dialogue">
+                <div>
+                    <div class="portlet-title">
+                        <br /><br />
+                        <div class="login-dialogue--heading-container">
+                            <h4 class="login-dialogue--ab-heading">Login...</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="portlet login-dialogue--border-style" style="margin-bottom: 10px;">
+                    <div class="portlet-body">
+                        {% if error_msg %}<span class="non-field-error">{{ error_msg }}</span>{% endif %}
+                        <div class="form-group">
+                            <form accept-charset="UTF-8" role="form" action="/login/" method="post" id="abloginForm" autocomplete="off">
+                                {% csrf_token %}
+                                <div class="login-form--input-container">
+                                    <div class="form-group">
+                                        <label for="id_username">Username</label>
+                                        <input type="text" name="username" class="form-control" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id_password">Password</label>
+                                        <input type="password" name="password" class="form-control" required />
+                                    </div>
+                                </div>
+                                <div class="row login-form--sub-container">
+                                    <div class="col-xs-6">
+                                        <button type="submit" class="btn login-form--button btn-block">Login</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-7 hidden-sm hidden-xs login-hero-img-container">
+            <div class="login-hero-img--content">
+                <p class="">
+                    Engaging in constant conversation, listening, talking, sharing, helping...
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

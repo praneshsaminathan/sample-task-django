@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom style-->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+    <style>
+        .login-hero-img-container {
+            height: 100vh;
+            background: url({% static 'img/homepage.jpeg' %});
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+        }
+        .bg-overlay {
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://unsplash.imgix.net/photo-1416339442236-8ceb164046f8?q=75&fm=jpg&s=8eb83df8a744544977722717b1ea4d09");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .bg-overlay-one {
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url({% static 'img/winc.jpg' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .bg-overlay-two {
+            background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url({% static 'img/sau-back.jpeg' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            color: #fff;
+            padding: 20px;
+            position: relative;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="login">
+{% block content %}
+{% endblock content %}
+{% block js %}
+{% endblock js %}
+{% block extra_js %}
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Bootstrap core JS -->
+    <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+{% endblock extra_js %}
+</body>
+</html>
